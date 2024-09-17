@@ -1,4 +1,6 @@
+
 import './Arquivo.css'
+
 
 const Arquivo = (props) => {
 
@@ -6,11 +8,10 @@ const Arquivo = (props) => {
 
     return (<div className='arquivo'>
         <div className='cabecalho'>
-            <img src={imagemfile} alt='Felipe Yajima'/>
+            <img src="/imagens/file.png" alt='File' width={100} height={100}/>
         </div>
         <div className='rodape'>
             <h4>{props.file}</h4>
-            <h5>conteudo do arquivo</h5>
         </div>      
     </div>)
 }

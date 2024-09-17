@@ -29,6 +29,8 @@ const Formulario = (props) => {
 
     const [file, setFile] = useState('')
     const [text, setText] = useState('')
+
+
     
     const aoSalvar = (evento) => {
         evento.preventDefault()
@@ -36,6 +38,9 @@ const Formulario = (props) => {
             file,
             text
         })
+
+        console.log("nome do arquivo: " + file)
+        console.log("conteudo do arquivo: " + text)
 
         fetch(end, {
             method: "POST",
@@ -57,7 +62,7 @@ const Formulario = (props) => {
     return (
         <section className="formulario">
             <form onSubmit={aoSalvar}>
-                <h2>Envio de arquivos do Backend para o Bucket permissionado pelo modulo IAMSR</h2>
+                <h2>Envio de arquivos Bucket S3</h2>
 
                 <CampoTexto 
                     obrigatorio={true} 
